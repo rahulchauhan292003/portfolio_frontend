@@ -6,6 +6,7 @@ const projects = [
     title: 'Ahuja Books',
     subtitle: 'E-commerce Web Application',
     period: 'Jan 2026 – Mar 2026',
+    live: 'https://www.ahujabooks.com/',
     icon: ShoppingCart,
     gradient: 'from-blue-600 to-cyan-600',
     borderColor: 'border-blue-500/20',
@@ -24,6 +25,8 @@ const projects = [
     title: 'Community Resource & Discussion Platform',
     subtitle: 'Social Community Web App',
     period: 'Aug 2025 – Nov 2025',
+    live: 'http://24help.org/',
+
     icon: Users,
     gradient: 'from-emerald-600 to-teal-600',
     borderColor: 'border-emerald-500/20',
@@ -114,6 +117,19 @@ export default function Projects() {
                       {t}
                     </span>
                   ))}
+                </div>
+
+                <div className="flex gap-3 mt-6">
+
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 transition text-sm text-white"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Live Demo
+                  </a>
                 </div>
               </div>
             </div>
